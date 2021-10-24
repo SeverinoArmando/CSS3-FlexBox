@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    width: 100%;
+    font-family:cursive;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+div img{
+    display: block;
+    width: 100%;
+}
+
+.flex-container{
+    display: flex;
+    max-width: 992px;
+    margin: auto;
+    width:100% ;
+    min-width: 320px;
+}
+header{
+    background-color: rgb(20, 27, 92);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: fixed;
+    
+    
+}
+header .list-item{
+    display: flex;
+    width: 100%;
+    max-width: inherit;
+    align-items:flex-end;
+}
+.list-item li a{
+    color: #fff;
+}
+
+header .menu{
+    justify-content: space-between;
+}
+.apresentacao{
+    /* vr e rem são medidas muito maiores que px */
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao .texto{
+    min-height: 200px;
+    padding: 2px;
+    margin: 4px;
+}
+.apresentacao .texto{
+    color: rgb(20, 27, 92);
+    font-size: 37px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.texto a{
+    background-color: rgb(20, 27, 92);
+    color: #fff;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    width: 300px;
+    display: block;
+}
+.texto{
+    line-height: 60px;
+    height: 40px;
+    text-shadow: -2px -2px 4px black;
+}
+li{
+    margin: 5px;
+}
+
+#quem-somos{
+    /* o row-reverse do flex direction nos ajuda a inverter a trocar de posicao dos items */
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#quem-somos h2{
+    font-size: 52px;
+    color: rgb(6, 53, 141);
+    display: flex;
+    padding: 9px;
+
+}
+
+/* Agora vamos usar um psdoelemento usando(::h2) */
+#quem-somos h2::before{
+    content: "";
+    height: 60px;
+    width: 6px;
+    margin-right: 3px;
+    background-color: rgb(22, 22, 114);
+    position:relative;
+    margin-bottom: 25px;
+    text-align: center;
+    
+}
+#quem-somos p{
+    margin-bottom: 10px;
+    text-indent: 50px;
+    margin-left: 5px;
+    width: 200px;
+}
+
+
+#quem-somos img{
+    box-shadow: -4px 0px 9px black;
+    /* width: 380px; */
+    margin-right: 5px;
+    border-radius: 5%;
+    width: 100%;
+    margin-top: auto;
+}
+.containet-externo{
+    background-color: #122A57;
+    margin-top: 110px;
+    margin-bottom: 40px;
+    box-shadow: #92a1b8 0px -4px 4px;
+}
+.containet-externo a{
+    text-decoration: none;
+    color: white;
+    background-color: #6388c96e;
+    border-radius:inherit;
+    /* padding: 6px; */
+}
+
+#servicos{
+    flex-direction: column;
+    /* width: fit-content; */
+    /* padding: 10px 10px; */
+}
+
+.list-servicos{
+    display: flex;
+    justify-content: space-between;
+}
+
+div.h2{
+    margin-bottom:46px;
+    color: white;
+    text-transform:uppercase;
+    font-size: 15pt;
+    text-shadow: turquoise 2px 2px 7px ;
+    text-align: center;
+    margin-top: 10px;
+
+
+}
+.list-servicos .item-servico{
+    text-align: center;
+    justify-content: space-around;
+    width: fit-content;
+    padding-bottom: 20px;
+}
+
+.item-servico a{
+    background-color: #fff;
+    color: #122A57;
+    border-radius: 30px;
+    text-align: center;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 50px;
+    font-weight: 400;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.botao{
+    /* width: 900px; */
+    background-color: #122A57;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    text-align: center;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 50px;
+    font-weight: 400;
+    text-decoration: none;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.item-servico p{
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+
+}.item-servico img{
+    width: 80%;
+    margin: auto;
+}
+
+#planos{
+    flex-direction: column;
+}
+
+.list-planos{
+    display: flex;
+    /* alinhamento dos itens por baixo */
+    align-items: flex-end;
+    /* width: fit-content; */
+    justify-content: space-between;
+}
+
+.item-plano{
+    flex: 1;
+    border: 5px solid #122A57;
+    margin-right: 20px;
+    padding: 5px;
+}
+.item-plano .botao{
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.item-plano h3{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/* Adicionar uma linha tracejada */
+.item-plano h3::after{
+    content: "";
+    background-color: #122A57;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.item-plano ul{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.item-plano ul li::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #122A57;
+    margin-right: 5px;
+
+}
+.item-plano ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+footer{
+    background-color: #122A57;
+    margin-top: 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+footer .footer{
+    justify-content: space-between;
+    color: #fff;
+}
+
+/* configuracoes de tela */
+@media(max-width:992px){
+    .flex-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    #quem-somos{
+        flex-direction: column-reverse;
+        margin-top: 50px;
+    }
+    #quem-somos img{
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-servicos{
+        flex-direction: column;
+    }
+    .item-servico{
+        width: 50%;
+        margin: auto;
+    }
+    .list-planos{
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    .list-planos .item-plano{
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    
+    header{
+        width: 100%;
+        margin: auto;
+    }
+    
+}
